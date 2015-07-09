@@ -144,6 +144,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * 3rd party providers
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class
+        */
     ],
 
     /*
