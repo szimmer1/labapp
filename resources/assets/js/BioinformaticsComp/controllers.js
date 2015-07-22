@@ -9,7 +9,9 @@
 
             $scope.pageHeader = "Congratulations, Angular is bootstrapped!";
 
-            $scope.datasets, $scope.computations;
+            $scope.datasets, $scope.computations
+            $scope.selectedDataset, $scope.selectedComputation;
+
             $scope.updateDatasets = function() {
                 DataSet.query({}, function(res) {
                     if (!res.error) {
@@ -28,6 +30,10 @@
             };
             $scope.updateComputations();
 
+            // watcher to test directive
+            $scope.$watch('selectedDataset', function(newval,oldval,scope) {
+                if (newval) alert("New selected object on controller scope! \n\n"+JSON.stringify(newval));
+            })
         }])
 
 })(angular || {});

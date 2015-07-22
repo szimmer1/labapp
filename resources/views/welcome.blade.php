@@ -25,7 +25,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <labapp-table labappdata="datasets" excludefields="$$hashKey path"></labapp-table>
+                    <labapp-table labappdata="datasets" labappselected="selectedDataset" excludefields="$$hashKey path"></labapp-table>
                 </div>
             </div>
 
