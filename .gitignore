@@ -5,3 +5,4 @@ DS_Store
 Homestead.yaml
 .env
 public/bower_components
+storage/datasets

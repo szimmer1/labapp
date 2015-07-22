@@ -15,7 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/api/test', function() {
-    return view('api_test');
+Route::get('/ferm', function() {
+    return view('ferm');
 });
 
+Route::get('/qc', function() {
+    return view('qc');
+});
+
+Route::resource('api/upload', 'UploadDataController',
+    ['only' => ['index','store','show']]);
+
+Route::resource('api/computation', 'ComputationController',
+    ['only' => ['index','show']]);
+
+Route::get('api/compute/{computationId}/{datasetId}', [
+    'as' => 'compute', 'uses' => 'ComputeController@compute']);

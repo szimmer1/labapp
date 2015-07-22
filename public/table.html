@@ -1,0 +1,16 @@
+<div ng-show="!selected"><span class="label label-danger">Nothing selected</span></div>
+<div ng-show="selected">
+    <span class="label label-success">Selected</span> [[ selected.name || selected.id ]]
+</div>
+<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <th ng-repeat="prop in props">[[ prop ]]</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="obj in dataArray" ng-class="{info: selected === obj}">
+            <td ng-repeat="prop in props" ng-click="select(obj)">[[ obj[prop] ]]</td>
+        </tr>
+    </tbody>
+</table>
