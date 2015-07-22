@@ -1,0 +1,3 @@
+[submodule "resources/assets/js/sharedDirectives"]
+	path = resources/assets/js/sharedDirectives
+	url = https://github.com/szimmer1/ngSharedDirectives.git
